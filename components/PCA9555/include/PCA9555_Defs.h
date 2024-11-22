@@ -19,7 +19,6 @@
 #define PCA9555_CMD_CONFPORT_0 0x06
 #define PCA9555_CMD_CONFPORT_1 0x07
 
-#define PCA9555_FIXED_ADDR_COMP 0b0010000 // This is the fixed portion of PCA9555 address
 #define PCA9555_CONV_FULL_ADDR(x) (x)      // Convert 0x20 etc. address to full based on datasheet
 
 #ifdef __cplusplus

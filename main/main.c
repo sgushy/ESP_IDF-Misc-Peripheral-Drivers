@@ -9,6 +9,7 @@
 #include "driver/i2c.h"
 
 #include "PCA9555.h"
+#include "ADS7828.h"
 
 #define PCA9555_I2C I2C_NUM_0
 #define PCA9555_SDA 21
@@ -158,9 +159,9 @@ void app_main(void)
 
     for (int i = 0; i < 5; i++)
     {
-        pca_9555_0_set_all_outputs_low();
         vTaskDelay(100);
         pca_9555_0_set_all_outputs_high();
         vTaskDelay(100);
+        pca_9555_0_set_all_outputs_low();
     }
 }
