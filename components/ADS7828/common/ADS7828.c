@@ -17,6 +17,21 @@ int ads7828_init(const ads7828_config_t *ads7828_handle)
     {
         return -1;
     }
+    ads7828_handle->data_bit_resolution = ADS7828_12_BIT_RESOLUTION;
+    i2c_bus_status = 0;
+    return i2c_bus_status;
+}
+
+/// @brief Start the I2C communication with ADS7830, if not already started
+/// @param ads7828_handle The ADS7830 config structure
+/// @return 0 on success
+int ads7828_init(const ads7828_config_t *ads7828_handle)
+{
+    if(ads7828_handle == NULL || ads7828_handle->i2c_addr == 0)
+    {
+        return -1;
+    }
+    ads7828_handle->data_bit_resolution = ADS7830_8_BIT_RESOLUTION;
     i2c_bus_status = 0;
     return i2c_bus_status;
 }
