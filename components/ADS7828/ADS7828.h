@@ -14,7 +14,7 @@ extern "C"
 int ads7828_init(const ads7828_config_t *ads7828_handle);
 int ads7830_init(const ads7828_config_t *ads7828_handle);
 
-int ads7828_read_channel(const ads7828_config_t *ads7828_handle, ads7828_transaction_t *ads7828_transaction, int *buffer);
+int ads7828_30_read_channel(const ads7828_config_t *ads7828_handle, ads7828_transaction_t *ads7828_transaction, int *buffer);
 
 #ifdef __cplusplus
 }
