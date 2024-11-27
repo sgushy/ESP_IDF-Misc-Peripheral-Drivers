@@ -31,7 +31,7 @@ extern "C"
     typedef struct ads7828_transaction
     {
         uint8_t command_byte;
-        int receive_buffer;
+        int receive_buffer[8];
     } __attribute__((packed)) ads7828_transaction_t;
 
 #ifdef __cplusplus
